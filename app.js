@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(
   morgan(
-    ":date[iso] :remote-addr :method :url :status :response-time ms - :res[content-length]"
+    "dev"
   )
 );
 app.use("/ysw_site", mainRoute)
