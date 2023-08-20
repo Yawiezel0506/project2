@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 
 import initialData from "./initial.js";
+import mainRoute from './routes/mainRoutes.js'
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(
     ":date[iso] :remote-addr :method :url :status :response-time ms - :res[content-length]"
   )
 );
+app.use("/ysw_site", mainRoute)
 
 initialData();
 

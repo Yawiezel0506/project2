@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import axios from "axios";
 
-const PRODUCTS_FILE_PATH = "./db/data.json";
+const PRODUCTS_FILE_PATH = "./db/products.json";
 
 const readFromFile = async () => {
   const data = await fs.readFile(PRODUCTS_FILE_PATH, "utf8");
