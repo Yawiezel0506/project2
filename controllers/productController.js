@@ -71,10 +71,31 @@ const createProduct = async (req, res) => {
   }
 };
 
+const changeQuantity = async (req, res) => {
+  try {
+    const productId = parseInt(req.params.id);
+    const updateProduct = req.body;
+    const product = await productsService.changeQuantity(
+      productId,
+      updateProduct
+    );
+
+    if (!product) {
+      return res.status(404).json({ message: "product not found" });
+    }
+
+    res.json(product);
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
 export default {
   getAllProducts,
   getProduct,
   deleteProduct,
   updateProduct,
   createProduct,
+  changeQuantity,
 };

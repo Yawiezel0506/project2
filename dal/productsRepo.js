@@ -51,6 +51,20 @@ const updateProduct = async (productId, newProduct) => {
   return products[productIndex];
 };
 
+const changeQuantity = async (productId, newProduct) => {
+  const products = await readProductsFromFile();
+  const productIndex = products.findIndex((product) => product.id == productId);
+
+  if (productIndex === -1) {
+    return null;
+  }
+
+  products[productIndex] = { ...products[productIndex], ...newProduct };
+  await writeProductsToFile(products);
+
+  return products[productIndex];
+};
+
 const createProduct = async (product) => {
   const products = await readProductsFromFile();
   product.id = v4();
@@ -66,4 +80,5 @@ export default {
   deleteProduct,
   updateProduct,
   createProduct,
+  changeQuantity,
 };

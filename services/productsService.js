@@ -17,6 +17,19 @@ const newProductSchema = joi.object({
   quantity: joi.number().integer().min(0).required(),
 });
 
+const updateProductSchema = joi.object({
+  title: joi.string(),
+  price: joi.number().positive(),
+  description: joi.string(),
+  category: joi.string(),
+  image: joi.string().uri(),
+  rating: joi.object({
+    rate: joi.number().positive().max(5),
+    count: joi.number().integer().min(0),
+  }),
+  quantity: joi.number().integer().min(0),
+});
+
 const createProduct = async (product) => {
   const { error } = newProductSchema.validate(product);
   if (error) {
@@ -39,7 +52,19 @@ const deleteProduct = async (productId) => {
 };
 
 const updateProduct = async (productId, newProduct) => {
+  const { error } = newProductSchema.validate(newProduct);
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
   return productsRepo.updateProduct(productId, newProduct);
+};
+
+const changeQuantity = async (productId, newProduct) => {
+  const { error } = updateProductSchema.validate(newProduct);
+  if (error) {
+    throw new Error(`Validation error: ${error.details[0].message}`);
+  }
+  return productsRepo.changeQuantity(productId, newProduct);
 };
 
 export default {
@@ -48,4 +73,5 @@ export default {
   deleteProduct,
   updateProduct,
   createProduct,
+  changeQuantity,
 };

@@ -9,5 +9,6 @@ route.get("/:id", productController.getProduct)
 route.delete("/:id", productController.deleteProduct)
 route.put("/:id", productController.updateProduct)
 route.post("/", productController.createProduct)
+route.patch("/:id", productController.changeQuantity)
 
 export default route;
