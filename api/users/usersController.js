@@ -1,5 +1,4 @@
-import usersRepo from "../dal/usersRepo.js";
-import userService from "../services/userServices.js";
+import userService from "./userServices.js";
 
 const createUser = async (req, res) => {
   try {
@@ -15,7 +14,7 @@ const login = async (req, res) => {
   try {
     const userAndPass = req.body;
     console.log(userAndPass);
-    const user = await usersRepo.login(userAndPass);
+    const user = await userService.login(userAndPass);
     console.log(user);
     if (!user) {
       return res.status(404).json({ message: "User not found" });

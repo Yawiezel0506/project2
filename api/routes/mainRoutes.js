@@ -1,8 +1,8 @@
 import express from "express";
 
-import productsRoute from "./productsRoute.js";
-import usersRoute from "./usersRoute.js"
-import authenticateRoute from "./authenticateRoute.js"
+import productsRoute from "../products/productsRoute.js";
+import usersRoute from "../users/usersRoute.js"
+import authenticateRoute from "../authenticate/authenticateRoute.js"
 
 const route = express.Router();
 
@@ -11,7 +11,7 @@ route.get("/", (req, res) => {
   res.send("WELCOME TO YSW SECOND PROJECT!");
 });
 route.use("/products", productsRoute);
-route.use("/:user/users", usersRoute);
-route.use("/", authenticateRoute)
+route.use("/users", usersRoute);
+route.use("/auth", authenticateRoute)
 
 export default route;

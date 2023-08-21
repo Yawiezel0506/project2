@@ -1,4 +1,4 @@
-import productsRepo from "../dal/productsRepo.js";
+import productsRepo from "./productsRepo.js";
 
 import joi from "joi";
 

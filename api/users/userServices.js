@@ -1,7 +1,6 @@
-import userRepository from "../dal/usersRepo.js";
 import { compare, hash } from "bcrypt";
 import joi from "joi";
-import usersRepo from "../dal/usersRepo.js";
+import usersRepo from "./usersRepo.js";
 
 const userSchema = joi.object({
   email: joi.string().email().required(),
@@ -38,23 +37,23 @@ const createUser = async (user) => {
   const hashedPassword = await hash(user.password, 10);
   user.password = hashedPassword;
 
-  return userRepository.createUser(user);
+  return usersRepo.createUser(user);
 };
 
 const getUser = async (userId) => {
-  return userRepository.getUser(userId);
+  return usersRepo.getUser(userId);
 };
 
 const getAllUsers = async () => {
-  return userRepository.getAllUsers();
+  return usersRepo.getAllUsers();
 };
 
 const updateUser = async (userId, updatedUser) => {
-  return userRepository.updateUser(userId, updatedUser);
+  return usersRepo.updateUser(userId, updatedUser);
 };
 
 const deleteUser = async (userId) => {
-  return userRepository.deleteUser(userId);
+  return usersRepo.deleteUser(userId);
 };
 
 export default {
