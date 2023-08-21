@@ -1,0 +1,243 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "project 2",
+    "dateExported": "2023-08-21T10:59:45.909Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6f877b40-507a-48a8-954e-899bca170612",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "get all products",
+            "url": "localhost:3000/api/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-21T08:53:13.551Z",
+            "modified": "2023-08-21T08:53:42.441Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4055212d-6817-4657-8ea7-3e1a4fa62850",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "get single product",
+            "url": "localhost:3000/api/products/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-08-21T08:54:20.703Z",
+            "modified": "2023-08-21T08:54:31.287Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e65a057a-88b8-4ea8-afa8-1411fa7f57af",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "post product",
+            "url": "localhost:3000/api/products",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-08-21T09:09:30.754Z",
+            "modified": "2023-08-21T09:09:49.222Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops\",\n  \"price\": 71,\n  \"description\": \"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday\",\n  \"category\": \"men's clothing\",\n  \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\n  \"rating\": {\n    \"rate\": 3.9,\n    \"count\": 120\n  },\n  \"quantity\": 111\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "402771bd-6495-47ae-a247-5060efd3e918",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "put product",
+            "url": "localhost:3000/api/products/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-08-21T09:10:25.194Z",
+            "modified": "2023-08-21T09:10:49.647Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops\",\n  \"price\": 71,\n  \"description\": \"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday\",\n  \"category\": \"men's clothing\",\n  \"image\": \"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg\",\n  \"rating\": {\n    \"rate\": 3.9,\n    \"count\": 120\n  },\n  \"quantity\": 111\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "faccc2aa-49db-488a-bb68-e1f61150a065",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "petch product",
+            "url": "localhost:3000/api/products/1",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-08-21T09:11:07.580Z",
+            "modified": "2023-08-21T09:11:32.697Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"quantity\": 11\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e3601710-b3ff-4b66-a8db-4523fe26878c",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "delete one product",
+            "url": "localhost:3000/api/products/1",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-08-21T09:12:09.969Z",
+            "modified": "2023-08-21T09:12:22.103Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cb7be607-4806-4ec3-8cd9-e0d32e35a56a",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "get all users",
+            "url": "localhost:3000/api/users",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-08-21T09:12:42.011Z",
+            "modified": "2023-08-21T10:43:59.299Z",
+            "headers": [
+                {
+                    "name": "is_admin",
+                    "value": "true"
+                },
+                {
+                    "name": "id",
+                    "value": "1"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f09a1bcc-4f1b-4c2a-9e96-546ef8c61cdd",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "get one user",
+            "url": "localhost:3000/api/users/2",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-21T09:13:31.142Z",
+            "modified": "2023-08-21T10:48:07.636Z",
+            "headers": [
+                {
+                    "name": "is_admin",
+                    "value": "false"
+                },
+                {
+                    "name": "id",
+                    "value": "1"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7b46b59f-132a-4ff6-8ef3-63c898085cfd",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "delete user",
+            "url": "localhost:3000/api/users/1/",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-08-21T09:14:02.226Z",
+            "modified": "2023-08-21T10:54:50.247Z",
+            "headers": [
+                {
+                    "name": "is_admin",
+                    "value": "false"
+                },
+                {
+                    "name": "id",
+                    "value": "1"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a668e330-76e1-4650-b265-d242071cf64b",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "put user",
+            "url": "localhost:3000/api/users/1/",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-08-21T09:14:35.249Z",
+            "modified": "2023-08-21T10:51:13.004Z",
+            "headers": [
+                {
+                    "name": "is_admin",
+                    "value": "true"
+                },
+                {
+                    "name": "id",
+                    "value": "1"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"user1@example.com\",\n  \"password\": \"user1passwor\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1135f601-a4b7-4b82-880e-0377c9c28704",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-08-21T10:52:11.631Z",
+            "modified": "2023-08-21T10:55:38.090Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"david@example.com\",\n  \"password\": \"david1user\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f31f6c5c-fe77-447a-a28c-4c81ed3e3725",
+            "colId": "a9a2c218-b25e-430d-bf2f-5aa8d5045d18",
+            "containerId": "",
+            "name": "register",
+            "url": "localhost:3000/api/auth/register",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-08-21T10:52:27.227Z",
+            "modified": "2023-08-21T10:54:33.084Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"david@example.com\",\n  \"password\": \"david1user\",\n  \"isAdmin\": false\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

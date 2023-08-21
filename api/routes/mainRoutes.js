@@ -1,8 +1,8 @@
 import express from "express";
 
 import productsRoute from "../products/productsRoute.js";
-import usersRoute from "../users/usersRoute.js"
-import authenticateRoute from "../authenticate/authenticateRoute.js"
+import usersRoute from "../users/usersRoute.js";
+import authenticateRoute from "../authenticate/authenticateRoute.js";
 
 const route = express.Router();
 
@@ -12,6 +12,6 @@ route.get("/", (req, res) => {
 });
 route.use("/products", productsRoute);
 route.use("/users", usersRoute);
-route.use("/auth", authenticateRoute)
+route.use("/auth", authenticateRoute);
 
 export default route;
