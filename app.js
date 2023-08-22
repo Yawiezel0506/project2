@@ -1,10 +1,13 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors"
 
 import initialData from "./initial.js";
 import mainRoute from "./api/routes/mainRoutes.js";
 
 const app = express();
+
+app.use(cors())
 
 app.use(express.json());
 app.use(morgan("dev"));

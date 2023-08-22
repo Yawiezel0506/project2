@@ -1,5 +1,6 @@
 import express from "express";
 
+
 import productsRoute from "../products/productsRoute.js";
 import usersRoute from "../users/usersRoute.js";
 import authenticateRoute from "../authenticate/authenticateRoute.js";
